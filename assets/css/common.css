@@ -1,0 +1,42 @@
+
+    body {
+  font-family: "Kite One", sans-serif;
+  font-weight: 400;
+  font-style: normal;    }
+    .navbar-brand {
+      font-size: 1.5rem;
+      color: #672727 !important;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card-header {
+      background-color: #efe6ec;
+      border-bottom: none;
+    }
+    .form-control {
+      border-radius: 0.5rem;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+    .card-body {
+        transition: all 0.3s ease; 
+        font-family: "Kotta One", serif;
+        font-weight: 400;
+      }
+      .card:hover .card-body {
+          cursor: pointer;
+        background-color: #f8f9fa; 
+        border-radius: 0.5rem;
+      }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Event</title>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Kite+One&family=Rum+Raisin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <style>
+    /* Add custom CSS for animation */
+    .form-group {
+      transition: transform 0.3s ease-out; /* Example transition property */
+    }
+
+    .form-group:hover {
+      transform: scale(1.05); /* Example animation on hover */
+    }
+    h5:hover {
+      animation: rotateAnimation 17s infinite linear; /* Example rotation animation */
+    }
+
+    @keyframes rotateAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(160deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <h5 class="font-weight-bold"> Aysha Al-shamsi Project</h5>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title text-dark">Create New Event</h5>
+      </div>
+      <div class="card-body">
+        <form id="event-form" class="event-form">
+          <div class="form-group">
+            <label for="eventName">Event Name</label>
+            <motion.input type="text" class="form-control" id="eventName" required
+              whileHover={{ scale: 1.05 }} /* Example motion animation on hover */
+            />
+          </div>
+          <div class="form-group">
+            <label for="eventDate">Event Date</label>
+            <motion.input type="date" class="form-control" id="eventDate" required
+              whileHover={{ scale: 1.05 }} /* Example motion animation on hover */
+            />
+          </div>
+          <div class="form-group">
+            <label for="eventTime">Event Time</label>
+            <motion.input type="time" class="form-control" id="eventTime" required
+              whileHover={{ scale: 1.05 }} /* Example motion animation on hover */
+            />
+          </div>
+          <div class="form-group">
+            <label for="eventDescription">Event Description</label>
+            <motion.textarea class="form-control" id="eventDescription" rows="3" required
+              whileHover={{ scale: 1.05 }} /* Example motion animation on hover */
+            ></motion.textarea>
+          </div>
+          <div class="form-group">
+            <label for="eventImage">Event Image</label>
+            <label for="Upload" class="d-block small text-underline text-danger">Please Upload Image</label>
+            <motion.input type="file" class="form-control-file" id="eventImage" accept="image/*"
+              whileHover={{ scale: 1.05 }} /* Example motion animation on hover */
+            />
+            <img id="image-preview" src="#" alt="Event Image" class="img-fluid" style="display: none; height: 200px; margin-top: 10px;">
+          </div>
+          <button type="submit" class="btn btn-success">Add Event</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer mt-5 py-3 bg-light">
+    <div class="container">
+      <span class="text-success font-weight-bold"> Aysha Al-Shamsi Project Event Countdown For Rihal &copy; 2024</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap  & JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="assets/js/home.js"></script>
+
+</body>
+</html>
